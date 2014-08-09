@@ -1,1 +1,15 @@
-通用启动器，是指jdk或者jre的bin目录下的java和javaw命令
+# 启动器
+
+启动器，是用来启动JVM和应用程序的工具。Hotspot中提供了两种启动器：通用启动器（Generic Launcher）和调试启动器（GAMMA Launcher）。
+
+通用启动器
+----------
+
+通用启动器，是指jdk或者jre的bin目录下的java和javaw命令。为启动一个java应用程序，Hotspot准备了一个JRE，加载指定的类（加载类加载器），并调用它的main方法。
+
+    java [ option ] class [ argument ... ]
+    java [ option ] -jar file.jar [ argument ... ]
+
+- **option**：传递给vm的参数，分standard options 和 non-standard options。标准Options，比如`-client`、`-server`、`-cp`、`-jar`、`-verbose`...；非标准Options，包括`-X`和`-XX`开头的参数，比如`-Xloggc:<file>`、`-XX:PermSize`、`-XX:MaxPermSize`等
+- **argument**： 传递给main方法的参数。
+
