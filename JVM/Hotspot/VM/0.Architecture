@@ -1,0 +1,26 @@
+VM架构
+=
+
+从层次上，Hotspot VM可以分为顶层模块、子模块、数据结构及算法层，一个顶层模块包含若干几个子模块，每个子模块定义了一些数据结构和算法。
+
+顶层模块包括：
+
+- Adlc：平台描述文件
+- Libdat：抽象数据结构
+- Asm：汇编器
+- Code：机器码生成
+- C1：client编译器
+- Ci：动态编译器
+- Compiler：调用动态编译器的接口
+- Opto：Server编译器，即C2编译器
+- Shark：基于LLVM实现的即时编译器
+- Iterpreter：解释器
+- Classfile：class文件解析和类的链接等
+- Gc_interface：GC接口
+- Gc_implementation：垃圾收集器的具体实现
+- Memory：内存管理
+- Oops：JVM内部对象表示
+- Prims：Hotspot对外接口
+- Runtime：运行时
+- Services：JMX接口
+- Utilizes：内部工具类和公共函数
